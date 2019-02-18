@@ -1,0 +1,7 @@
+language: objective-c
+osx_image: xcode8.1
+rvm:
+- 2.2
+
+after_script:
+  chmod +x deploy.sh && ./deploy.sh
