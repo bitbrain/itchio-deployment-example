@@ -1,7 +1,17 @@
-language: objective-c
-osx_image: xcode8.1
-rvm:
-- 2.2
+language: android
+jdk:
+  - openjdk8
+
+android:
+  components:
+    # The BuildTools version used by your project
+    - build-tools-26.0.2
+
+    # The SDK version used to compile your project
+    - android-26
+
+script: 
+  echo "this is my game" > mygame.jar
 
 after_script:
   chmod +x deploy.sh && ./deploy.sh
